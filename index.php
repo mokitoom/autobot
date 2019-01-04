@@ -12,10 +12,15 @@ foreach($events['events']as $event){
 //Get replyToken
 $replyToken = $event['replyToken'];
 switch($event['message']['type']) {
-case 'image':
-$messageID = $event['message']['id']; $respMessage='Hello, your image ID is '.$messageID;
-break; default:
-$respMessage='Please send image only'; break;
+case 'sticker':
+$messageID = $event['message']['packageId'];
+//Reply message
+$respMessage='Hello, your Sticker Package ID is '.$messageID;
 }
-$httpClient = new CurlHTTPClient($channel_token);
-$bot=newLINEBot($httpClient, array('channelSecret'=> $channel_secret));
+break; default:
+//Reply message
+$respMessage='Please send Sticker only'; break;
+$httpClient = new CurlHTTPClient($channel_token); $bot=newLINEBot($httpClient, array('channelSecret'=> $channel_secret));
+$textMessageBuilder=newTextMessageBuilder($respMessage);
+$response=$bot->replyMessage($replyToken, $textMessageBuilder); }
+echo "OK";
