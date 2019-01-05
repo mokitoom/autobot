@@ -37,5 +37,5 @@ if (!is_null($events['events']))
 	} 
 }
 
-echo "$textMessageBuilder";
+echo "ok";
 error_log( $message );
