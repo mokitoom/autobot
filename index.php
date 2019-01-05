@@ -2,7 +2,8 @@
 require_once('./vendor/autoload.php');
 
 // Namespace
-use \LINE\LINEBot\HTTPClient\CurlHTTPClient; use \LINE\LINEBot;
+use \LINE\LINEBot\HTTPClient\CurlHTTPClient; 
+use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 
 // Token
@@ -38,7 +39,7 @@ if (!is_null($events['events']))
 				break;
 		}
 		$httpClient = new CurlHTTPClient($channel_token);
-		$bot=newLINEBot($httpClient, array('channelSecret'=> $channel_secret)); 
+		$bot=new LINEBot($httpClient, array('channelSecret'=> $channel_secret)); 
 		$textMessageBuilder = new TextMessageBuilder($respMessage);
 		$response=$bot->replyMessage($replyToken, $textMessageBuilder); 
 	}
