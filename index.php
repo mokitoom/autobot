@@ -5,7 +5,7 @@ use \LINE\LINEBot\HTTPClient\CurlHTTPClient;
 use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder;
 $channel_token = 'Dmq1hDEyi7LHI8MYzTDC4aljxLt1eu8H6t3bpwgZVZluBhWu+/jsbb6bITP57MYW3+GCcMwvJ2d3Yh5Ck7ifRvw4coVIgwFJRG0H2iRAAU8yU+y4dZVf3lS/drpzTGfOkLUmQAQ50itVR/HuL05DsAdB04t89/1O/w1cDnyilFU=';
-$channel_secret = '8e0ad013e465ccffc6d8917720d01020';
+$channel_secret = 'c129134482dfecd9c4a05384eb535b1b';
 
 //Get message from Line API
 $content = file_get_contents('php://input');
