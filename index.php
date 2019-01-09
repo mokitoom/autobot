@@ -27,9 +27,9 @@ if (!is_null($events['events']))
 				
 				//Reply message
 				$respMessage='Hello, your message is '.$event['message']['text'];
-				$httpClient= newCurlHTTPClient($channel_token); 
+				$httpClient= new CurlHTTPClient($channel_token); 
 				$bot= new LINEBot($httpClient, array('channelSecret'=> $channel_secret)); 
-				$textMessageBuilder= newTextMessageBuilder($respMessage);
+				$textMessageBuilder= newT extMessageBuilder($respMessage);
 				$response=$bot->replyMessage($replyToken, $textMessageBuilder); 
 				break;
 			} 		
