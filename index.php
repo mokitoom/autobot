@@ -38,5 +38,5 @@ if (!is_null($events['events']))
 	} 
 }
 
-echo "ok เชื่มต่อได้";
+echo "ok เชื่มต่อได้" ;
 ?>
