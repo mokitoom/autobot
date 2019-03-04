@@ -22,17 +22,17 @@ if (!is_null($events['events']))
 			{
 				case 'text':
 				//Get replyToken
-				$replyToken = $event['replyToken']; 
+					$replyToken = $event['replyToken']; 
 				//Reply message
-				$respMessage='Hello, your message is '.$event['message']['text'];
-				$httpClient=newCurlHTTPClient($channel_token); 
-				$bot=newLINEBot($httpClient, array('channelSecret'=> $channel_secret)); 
-				$textMessageBuilder=newTextMessageBuilder($respMessage);
-				$response=$bot->replyMessage($replyToken, $textMessageBuilder); 
+					$respMessage='Hello, your message is '.$event['message']['text'];
+					$httpClient=newCurlHTTPClient($channel_token); 
+					$bot=newLINEBot($httpClient, array('channelSecret'=> $channel_secret)); 
+					$textMessageBuilder=newTextMessageBuilder($respMessage);
+					$response=$bot->replyMessage($replyToken, $textMessageBuilder); 
 				break;
 			} 
 		}
 	} 
 }
 
-echo "OK";
+echo "OKxxx";
